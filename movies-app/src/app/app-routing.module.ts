@@ -8,7 +8,7 @@ import { LoggedInServiceService } from './login/logged-in-service.service';
 
 const routes: Routes = [
   {path: 'movies/:id', component: MovielistComponent,  canActivate: [AuthGuard]},
-  {path: '', component: MovielistComponent, canActivate: [AuthGuard]},
+  {path: '', component: MovielistComponent, canActivate: [AuthGuard], pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'movies', component: MovielistComponent, canActivate: [AuthGuard]}
 ];
